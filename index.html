@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>INCOME EXPENSE CALCULATOR</h1>
+    <div class="calculator">
+<div class="firstsheet">
+    <div class="first">
+        <div class="second">
+    <label for="income">INCOME</label><br>
+    <input type="number" id="income" placeholder="enter your income" value=""><br>
+    <small style="margin-left: 10px;" id="errorincome"></small>
+        </div>
+        <div class="second">
+    <label for="category">TYPE OF INCOME</label><br>
+    <input type="text" id="category" placeholder="income category" value=""><br>
+    <small style="margin-left: 10px;" id="errorcategory"></small>
+</div>
+
+<!-- -----------------------button-------------------- -->
+
+
+<input type="button" value="add income" id="addincome" onclick="income()" >
+    </div>
+
+
+
+    <div class="secondsheet">
+        <div class="second">
+        <label for="expense">EXPENSE</label><br>
+        <input type="number" id="expense" placeholder="expense amount"><br>
+        <small style="margin-left: 10px;" id="errorexpense"></small>
+    </div>
+    <div class="second">
+        <label for="expcategory">TYPE OF EXPENSE</label><br>
+        <input style="margin-left: 10px;" type="text" id="expcategory" placeholder="type of expense"><br>
+        <small id="errorexpcategory"></small>
+    </div>
+
+    <!-- ---------------------button-------------- -->
+
+
+    <input type="button" id="expensebtn" value="add expense" onclick="expense()">
+
+    </div>
+</div>
+
+<div class="thirdsheet">
+    <div class="incomemain">
+        <h2>INCOME</h2>
+        <table id="incometable">
+            <thead>
+                <tr>
+                    <th class="tablecol">Category</th>
+                    <th class="tablecol">Amount</th>
+                </tr>
+            </thead>
+            <tbody id="incometable-row">
+
+
+            </tbody>
+        </table >
+        <div class="total">
+        <h3>TOTAL INCOME</h3>
+        <h4 id="totalbalance"></h4>
+    </div>
+    </div>
+    
+    <div class="expensemain">
+        <h2>EXPENSE</h2>
+        <table id="expensetable">
+            <thead>
+                <tr>
+                    <th class="tablecol">Category</th>
+                    <th class="tablecol">Amount</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="expensetable-row">
+
+
+            </tbody>
+        </table>
+        <div class="total">
+        <h3>TOTAL EXPENSE</h3>
+        <h4 id="totalexpbalance"></h4>
+    </div>
+    </div>
+
+    
+
+
+</div>
+</div>
+
+<div>
+    <span id="last">TOTAL BALANCE =</span>
+    <span id="lastbalance"></span>
+</div>
+
+
+<!-- -----------------pie chart---------------- -->
+
+
+<div style="height: 500px; width: 500px;">
+    <canvas  id="myChart"></canvas>
+  </div>
+    
+
+    <script src="project.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
